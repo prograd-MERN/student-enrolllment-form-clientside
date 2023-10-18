@@ -2,8 +2,9 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import LoginComponent from './components/LoginComponent/LoginComponent';
-import SignupComponent from './components/SignUpComponent/SignUpComponent';
+import ForgotPasswordComponent from './components/ForgotPasswordComponent/ForgotPasswordComponent'; 
 import UserDataComponent from './components/UserDataComponent/UserDataComponent';
+import SubjectEnrollComponent from './components/SubjectEnrollComponent/SubjectEnrollComponent';
 
 
 const App = () => {
@@ -20,9 +21,9 @@ const App = () => {
                                 <li className='nav-item'>
                                     <Link className='nav-link' to={'/login'}>Login</Link>
                                 </li>
-                                <li className='nav-item'>
+                                {/* <li className='nav-item'>
                                     <Link className='nav-link' to={'/signup'}>Sign Up</Link>
-                                </li>
+                                </li> */}
                             </ul>
 
                         </div>
@@ -36,7 +37,8 @@ const App = () => {
                             <Routes>
                                 <Route exact path='/' element={<LoginComponent/>}/>
                                 <Route path='/login' element={<LoginComponent/>}/>
-                                <Route path='/signup' element={<SignupComponent/>}/>
+                                <Route path='/enrollment' element={<SubjectEnrollComponent/>}/>
+                                <Route path='/forgotpassword' element={<ForgotPasswordComponent/>}/>
                                 <Route path='/userdata' element={<UserDataComponent/>}/>
                             </Routes>
                         </div>
